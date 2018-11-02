@@ -24,7 +24,7 @@ npm install @flute/vue-countdown vue
 
 浏览器:
 
-```
+```js
 <script src="/path/to/vue.js"></script>
 <script src="/path/to/vue-countdown.js"></script>
 <script>Vue.component(VueCountdown.name, VueCountdown);</script>
@@ -32,7 +32,7 @@ npm install @flute/vue-countdown vue
 
 ### 使用
 
-```
+```js
 import Vue from 'vue';
 import VueCountdown from '@flute/vue-countdown';
 
@@ -94,10 +94,3 @@ Vue.component(VueCountdown.name, VueCountdown);
 | --- | --- | --- |
 | start | 当倒计时开始时触发 | 无 |
 | end | 当倒计时结束时触发 | 无 |
-
-
-
-
-
-
-
