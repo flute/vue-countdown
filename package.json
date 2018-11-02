@@ -1,13 +1,36 @@
 {
-  "name": "countdown",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@flute/vue-countdown",
+  "description": "Countdown component for Vue.js.",
+  "version": "1.0.0",
+  "main": "dist/countdown.common.js",
+  "repository": "flute/vue-countdown",
+  "homepage": "https://flute.github.io/vue-countdown",
+  "license": "MIT",
+  "author": {
+    "name": "Ludis",
+    "url": "https://ldsun.com"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "keywords": [
+    "countdown",
+    "component",
+    "vue-component",
+    "html",
+    "css",
+    "javascript",
+    "front-end",
+    "web"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name countdown ./src/index.js",
     "lint": "vue-cli-service lint"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^2.5.17"
   },
   "devDependencies": {
