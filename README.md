@@ -54,7 +54,7 @@ Vue.component(VueCountdown.name, VueCountdown);
   </template>
 </VueCountdown>
 
-<!--
+/**
 开始前：
 <div>
   距离开始还剩: 01天01小时11分钟11秒
@@ -69,7 +69,7 @@ Vue.component(VueCountdown.name, VueCountdown);
 <div>
   已结束: 00天00小时00分钟00秒
 </div>
--->
+**/
 ```
 
 更多使用案例参考： https://flute.github.io/vue-countdown
