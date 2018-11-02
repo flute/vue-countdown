@@ -1,15 +1,12 @@
 {
-  "name": "@flute/vue-countdown",
+  "name": "@ludis/vue-countdown",
   "description": "Countdown component for Vue.js.",
   "version": "1.0.0",
   "main": "dist/countdown.common.js",
   "repository": "flute/vue-countdown",
   "homepage": "https://flute.github.io/vue-countdown",
   "license": "MIT",
-  "author": {
-    "name": "Ludis",
-    "url": "https://ldsun.com"
-  },
+  "author": "ludis",
   "files": [
     "src",
     "dist"

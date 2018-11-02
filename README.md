@@ -19,7 +19,7 @@ Website: https://flute.github.io/vue-countdown
 ### 安装
 
 ```
-npm install @flute/vue-countdown vue
+npm install @ludis/vue-countdown
 ```
 
 浏览器:
@@ -34,7 +34,7 @@ npm install @flute/vue-countdown vue
 
 ```js
 import Vue from 'vue';
-import VueCountdown from '@flute/vue-countdown';
+import VueCountdown from '@ludis/vue-countdown';
 
 Vue.component(VueCountdown.name, VueCountdown);
 

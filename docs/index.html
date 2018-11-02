@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="app">
+        <Countdown
+            :duration="1*60"
+            @start="startHandler"
+            @end="endHandler"
+            :startTime="startTime">
+            <template slot="tip" scope="{tip}">
+                {{tip}}
+            </template>
+            <template slot="countdown" scope="props">
+                {{props.hours}} : {{props.minutes}} : {{props.seconds}}
+            </template>
+        </Countdown>
+
+        <!-- <Countdown
+            @start="startHandler"
+            @end="endHandler"
+            :startTime="startTime"
+            :endTime="endTime">
+            <template slot="tip" scope="{tip}">
+                {{tip}}
+            </template>
+            <template slot="countdown" scope="props">
+                {{props.hours}} : {{props.minutes}} : {{props.seconds}}
+            </template>
+        </Countdown> -->
+
+        <Countdown
+            :duration="1*60"
+            @start="startHandler"
+            @end="endHandler"
+            startTime="2018-11-02 18:15:00">
+            <template slot="tip" scope="{tip}">
+                {{tip}}
+            </template>
+            <template slot="countdown" scope="props">
+                {{props.days}} : {{props.hours}} : {{props.minutes}} : {{props.seconds}}
+            </template>
+        </Countdown>
+    </div>
+        
+    
+</body>
+<script src="https://unpkg.com/vue@2.5.17/dist/vue.min.js"></script>
+<script src="../dist/countdown.umd.js"></script>
+<script>
+window.onload = function (){
+    Vue.component('Countdown', countdown.default);
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                counting: false,
+                startTime: new Date().getTime() + 1*60*1000, // 1分钟后开始
+                endTime: new Date().getTime() + 3*60*1000, // 三分钟后结束 -> 持续2分钟结束
+                startTimeDays: new Date().getTime() +  2*24*60*1*60*1000 // 2天后开始
+            };
+        },
+        methods: {
+            startHandler: function () {
+                this.counting = true;
+            },
+            endHandler: function () {
+                this.counting = false;
+            }
+        }
+    });
+}
+
+</script>
+</html>
